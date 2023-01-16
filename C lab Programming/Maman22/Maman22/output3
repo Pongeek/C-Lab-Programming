@@ -1,0 +1,126 @@
+hello ladies and gentlemen!, and welcome to SET OPERATIONS.
+
+Let's play around with sets by using few operations on them.
+
+1. Valid set names are only: SETA, SETB, SETC, SETD, SETE, SETF.
+
+2. Valid opertaions only: 'read_set', 'print_set', 'union_set', 'intersect_set', 'sub_set' and 'symdiff_set'
+
+3. Valid range of numbers: 0-127 inc.
+
+4. To use function 'read_set', input as follows : 
+
+'read_set <setname>,<number>,...,<number>,-1' then press <ENTER>
+
+for example: read_set SETA, 1, 2 ,3 ,-1
+
+5. To perform 'print_set', input as follows:
+
+'print_set <setname>' then press <ENTER>
+
+for example: 'print_set SETA'
+
+6. To use fucntion union/intersect/sub/symdiff _set, input as follows:
+
+'<operation> <setname1>,<setname2>,<setname3>' then press <ENTER>
+
+for example: 'intersect_set SETB, SETF, SETD'
+
+NOTE: to print the solution of the operation from example above, write 'print_set SETC'NOTE: the same set can be used twice or 3 times in uni/inter/sub/symdiff operations.
+
+7. to quit: 'stop'and then press <ENTER>
+
+
+
+~Write a command: 
+input:  read_set SETA,1,2,-1
+output: Done!
+
+
+~Write a command: 
+input:  print_set SETA
+output: SETA:  1  2 
+
+
+~Write a command: 
+input:  read_set SETB,3,4,-1
+output: Done!
+
+
+~Write a command: 
+input:  print_set SETB
+output: SETB:  3  4 
+
+
+~Write a command: 
+input:  union_set SETA,SETB,SETC
+output: Done!
+
+
+~Write a command: 
+input:  print_set SETC
+output: SETC:  1  2  3  4 
+
+
+~Write a command: 
+input:  read_set SETD,17,18,19,-1
+output: Done!
+
+
+~Write a command: 
+input:  print_set SETD
+output: SETD:  17  18  19 
+
+
+~Write a command: 
+input:  read_set SETE,18,19,20,21,-1
+output: Done!
+
+
+~Write a command: 
+input:  print_set SETE
+output: SETE:  18  19  20  21 
+
+
+~Write a command: 
+input:  intersect_set SETD,SETE,SETF
+output: Done!
+
+
+~Write a command: 
+input:  print_set SETF
+output: SETF:  18  19 
+
+
+~Write a command: 
+input:  read_set SETA,7,8,9,-1
+output: Done!
+
+
+~Write a command: 
+input:  print_set SETA
+output: SETA:  7  8  9 
+
+
+~Write a command: 
+input:  read_set SETB,8,-1
+output: Done!
+
+
+~Write a command: 
+input:  print_set SETB
+output: SETB:  8 
+
+
+~Write a command: 
+input:  sub_set SETA,SETB,SETC
+output: Done!
+
+
+~Write a command: 
+input:  print_set SETC
+output: SETC:  7  9 
+
+
+~Write a command: Error: no 'stop' command at EOF redirection.
+

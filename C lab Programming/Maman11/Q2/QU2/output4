@@ -1,0 +1,11 @@
+Following information shows the number you've entered in different bases before rotation:
+Your number in DEC base 10 is: 10
+Your number in base 2 is: 00000000000000000000000000001010
+Your number in OCT base 8 is: 12
+Your number in HEX base 16 is: a
+Following information shows the number you've entered in different bases after rotation:
+Your number in DEC base 10 is: 5
+Your number in base 2 is: 00000000000000000000000000000101
+Your number in OCT base 8 is: 5
+Your number in HEX base 16 is: 5
+
