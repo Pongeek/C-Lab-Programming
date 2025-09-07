@@ -1,0 +1,56 @@
+Assembler Project Explanation
+
+This project implements a two-pass assembler for a custom assembly language. The assembler processes assembly code files (.as) and generates machine code output along with additional files for linking and loading.
+
+KAssembler Project Explanation
+
+This assembler project is designed to process assembly-like code files and generate the corresponding machine code output. The project is structured into several key components, each handling a specific part of the assembly process.
+
+1. Main Program (main.c)
+The main program orchestrates the entire assembly process. It handles multiple input files, processes them through various stages, and generates output files for each successfully assembled input. The main stages include:
+- Lexical analysis (pre-processing and post-processing)
+- Preprocessing (macro handling)
+- Parsing
+- Semantic analysis
+- Code generation
+
+For each successful assembly, it creates an output directory named "<filename>_output" containing the generated files.
+
+2. Lexer (lexer.h)
+The lexer is responsible for tokenizing the input source code. It performs this task twice:
+- Pre-processing: Initial tokenization of the raw input file
+- Post-processing: Tokenization of the preprocessed code
+
+3. Preprocessor (preprocessor.h)
+The preprocessor handles macro definitions and expansions. It processes the tokenized input from the pre-processing lexer and generates an intermediate file (.am) with expanded macros.
+
+4. Parser (parser.h)
+The parser takes the tokenized input from the post-processing lexer and builds an abstract syntax tree (AST) representation of the code. It identifies and structures various elements like labels, instructions, and directives.
+
+5. Semantic Analyzer (semantic_analyzer.h)
+The semantic analyzer checks the parsed code for semantic errors, ensuring that the code adheres to the assembly language rules and constraints.
+
+6. Code Generator (code_generator.h)
+The code generator is responsible for translating the parsed and analyzed code into machine code. It generates:
+- Object file (.ob): Contains the binary representation of the assembled code
+- External file (.ext): Lists external references
+- Entry file (.ent): Lists entry points
+
+Key structures and functions:
+- InstructionMemory and InstructionOperandMemory: Represent the memory layout of instructions and operands
+- generate_object_and_external_files: Generates the content for object and external files
+- output_generate: Orchestrates the generation of all output files
+
+The assembler handles various assembly language constructs, including:
+- Instructions (e.g., mov, add, sub)
+- Directives (.data, .string, .entry, .extern)
+- Labels
+- Addressing modes (immediate, direct, register direct, register indirect)
+
+Error handling is implemented at each stage, with errors reported and halting the process if encountered.
+
+This assembler project demonstrates a comprehensive approach to assembly language processing, from lexical analysis through to code generation, with careful attention to error handling and output generation.
+
+The TheTest folder contains the main tests for complex assembly codes in this assembler project. This folder is crucial for verifying the functionality of the entire assembler pipeline when processing more intricate and realistic assembly code examples.
+
+
